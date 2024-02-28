@@ -16,8 +16,8 @@
         <td class='table-row__data'>{{ product.name }}</td>
         <td class='table-row__data'>{{ product.stock }}</td>
         <td class='table-row__action'>
-          <a class='button-action' [routerLink]="['/products', product.productId]">Ver</a>
-          <a class='button-action' [routerLink]="['/products', product.productId]">Registrar movimiento</a>
+          <a class='button-action' [routerLink]="['/show', product.productId]">Ver</a>
+          <a class='button-action' [routerLink]="['/register', product.productId]">Registrar movimiento</a>
         </td>
       </tr>
     </tbody>

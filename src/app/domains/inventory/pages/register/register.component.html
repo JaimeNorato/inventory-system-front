@@ -1,1 +1,26 @@
-<p>register works!</p>
+<div>
+  <h3 class="subtitle">Registrar movimiento para el producto {{product().name}} </h3>
+  <div class="container-actions">
+    <a class="button-primary" routerLink="/list">Atrás</a>
+  </div>
+  <form class="form" >
+      <div class="row">
+          <label class="row-label" >Cantidad</label>
+          <input class="row-input" type="number" min="1" step="1" [formControl]="quantityCtrl" required>
+      </div>
+      <div class="row">
+        <label class="row-label" for="type">Tipo</label>
+        <select class="row-select" name="type" [formControl]="typeCtrl">
+            <option value="0">Ingreso</option>
+            <option value="1">Salida</option>
+        </select>
+    </div>
+      <div class="row">
+        <label class="row-label" for="stock">Observaciones</label>
+        <textarea class="row-input" [formControl]="observationCtrl"></textarea>
+    </div>
+      <div class="row">
+          <button class="button-primary" type="button" (click)="saveInventory()">Crear</button>
+      </div>
+  </form>
+</div>

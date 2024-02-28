@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import {ListComponent} from '@products/pages/list/list.component';
 import {ShowComponent} from '@products/pages/show/show.component';
 import {CreateComponent} from '@products/pages/create/create.component';
+import { RegisterComponent } from '@inventory/pages/register/register.component';
 
 export const routes: Routes = [
     {
@@ -15,10 +16,14 @@ export const routes: Routes = [
     },
     {
       path: 'show/:id',
-      component: ShowComponent
+      component: ShowComponent,
     },
     {
       path: 'create',
       component: CreateComponent
+    },
+    {
+      path: 'register/:id',
+      component: RegisterComponent
     }
 ];

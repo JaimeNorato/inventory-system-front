@@ -1,6 +1,23 @@
 <div>
-  <!-- <h1>{{ product.name }}</h1>
-  <p>Stock: {{ product.stock }}</p>
-  <a [routerLink]="['/products', product.id, 'edit']">Edit</a>
-  <a [routerLink]="['/products']">Back</a> -->
+  <h3 class="subtitle">Movimientos de inventario del Producto: {{product().name}}</h3>
+  <div class="container-action">
+    <a class="button-primary" routerLink="/list">Atrás</a> |
+    <a class="button-primary" [routerLink]="['/register', id]">Registrar movimiento</a>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Cantidad</th>
+        <th>Tipo</th>
+      </tr>
+    </thead>
+    <tbody class="table-body">
+      <tr *ngFor="let inventory of inventories()">
+        <td class='table-row__data'>{{ inventory.date }}</td>
+        <td class='table-row__data'>{{ inventory.quantity }}</td>
+        <td class='table-row__data'>{{ inventory.type === 1 ? 'Entrada' : 'Salida' }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
