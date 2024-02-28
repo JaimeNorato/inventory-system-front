@@ -69,7 +69,7 @@ export class RegisterComponent {
       }).subscribe({
         next: (inventoryMovement) => {
           console.log(inventoryMovement);
-          this.router.navigate(['/list']);
+          this.router.navigate(['/show', this.id]);
         },
         error: (error) => {
           console.error(error);

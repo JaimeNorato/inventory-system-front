@@ -10,13 +10,15 @@
         <th>Fecha</th>
         <th>Cantidad</th>
         <th>Tipo</th>
+        <th>Observaciones/th>
       </tr>
     </thead>
     <tbody class="table-body">
       <tr *ngFor="let inventory of inventories()">
         <td class='table-row__data'>{{ inventory.date }}</td>
         <td class='table-row__data'>{{ inventory.quantity }}</td>
-        <td class='table-row__data'>{{ inventory.type === 1 ? 'Entrada' : 'Salida' }}</td>
+        <td class='table-row__data'>{{ inventory.type === 1 ? 'Salida' : 'Entrada' }}</td>
+        <td class='table-row__data'>{{ inventory.observation }}</td>
       </tr>
     </tbody>
   </table>
