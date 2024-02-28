@@ -1,0 +1,19 @@
+<div>
+  <h3 class="subtitle">Crear Producto</h3>
+  <div class="container-actions">
+      <a class='button-action' routerLink="/list" >Cancelar</a>
+  </div>
+  <form class="form" >
+      <div class="row">
+          <label class="row-label" for="name">Nombre</label>
+          <input class="row-input" type="text" name="name" [formControl]="nameCtrl" required>
+      </div>
+      <div class="row">
+        <label class="row-label" for="stock">Stock</label>
+        <input class="row-input" type="number" min="0" step="1" name="stock" [formControl]="stockCtrl" required>
+    </div>
+      <div class="row">
+          <button class="button-primary" type="button" (click)="saveProduct()">Crear</button>
+      </div>
+  </form>
+</div>

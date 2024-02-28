@@ -1,0 +1,25 @@
+<div>
+  <h3 class="subtitle">Productos</h3>
+  <div class="container-action">
+    <a class="button-primary" routerLink="/create">Nuevo</a>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Stock</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody class="table-body">
+      <tr *ngFor="let product of products()">
+        <td class='table-row__data'>{{ product.name }}</td>
+        <td class='table-row__data'>{{ product.stock }}</td>
+        <td class='table-row__action'>
+          <a class='button-action' [routerLink]="['/products', product.productId]">Ver</a>
+          <a class='button-action' [routerLink]="['/products', product.productId]">Registrar movimiento</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

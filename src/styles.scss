@@ -1,1 +1,155 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $league-spartan;
+    font-weight: $weight-500;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  background-color: $background;
+  color: $secondaryColorDark;
+  justify-content: center;
+  align-items: center;
+}
+
+a{
+  text-decoration: none;
+  color: $secondaryColorDark;
+}
+
+.container-actions{
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  margin-right: 4rem;
+  padding-right: 4rem;
+}
+
+.subtitle{
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #70118d;
+}
+
+/* content: buttons */
+.button-primary{
+  background-color: #70118d;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover{
+    background-color: #333;
+    color: #fff;
+  }
+  &:active{
+    background-color: #173cb6;
+    color: #fff;
+  }
+}
+
+.button-action{
+  background-color: #333;
+  color: #fff;
+  margin: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #70118d;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover{
+    background-color: #70118d;
+    color: #fff;
+  }
+  &:active{
+    background-color: #173cb6;
+    color: #fff;
+  }
+}
+
+.table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+  th, td{
+    border: 1px solid #70118d;
+    padding: 0.5rem;
+    text-align: center;
+  }
+}
+
+.table-header{
+  background-color: #70118d;
+  color: #fff;
+  padding: 0.5rem;
+  th{
+    background-color: #70118d;
+    color: #fff;
+    padding: 0.5rem;
+  }
+}
+
+.table-row__data{
+  background-color: #ffff;
+  text-align: center;
+}
+
+.show{
+  justify-content: left;
+  align-items: left;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.show-item{
+  display: flex;
+}
+.show-item__title{
+  color: #70118d;
+}
+/* content: forms */
+.form{
+  display: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.row{
+  display: grid;
+  margin-top: 1rem;
+}
+.row-label{
+  color: #48078a;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.row-input{
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #70118d;
+  border-radius: 5px;
+  width: 94%;
+}
+.row-input:focus{
+  outline: none;
+  border: 2px solid #48078a;
+}
+.row-select{
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #70118d;
+  border-radius: 5px;
+  width: 100%;
+}
+.row-select:focus{
+  outline: none;
+  border: 2px solid #48078a;
+}
